@@ -1,0 +1,66 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+{
+    "username": "newUser",
+    "password": "yourPassword"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+{
+    "username": "newUser",
+    "password": "yourPassword"
+}
+
+###
+
+POST http://localhost:3000/transactions
+Content-Type: application/json
+{
+    "id":1,
+    "type": "expense",
+    "category": "Food",
+    "amount": 150,
+    "date": "2023-10-22",
+    "description": "Dinner at restaurant"
+}
+
+###
+
+GET http://localhost:3000/transactions
+
+###
+
+GET http://localhost:3000/transactions/5
+
+###
+
+PUT http://localhost:3000/transactions/6
+Content-Type: application/json
+{
+    "type": "expense",
+    "category": "Food",
+    "amount": 150,
+    "date": "2023-10-22",
+    "description": "Dinner at restaurant"
+}
+
+
+###
+
+GET http://localhost:3000/reports/monthly?year=2024
+
+###
+
+DELETE http://localhost:3000/transactions/5
+
+###
+
+GET http://localhost:3000/summary?startDate=2023-01-01&endDate=2023-10-22
+
+
+###
+
+GET http://localhost:3000/docs
